@@ -10,6 +10,11 @@
 		23B5F7222432C7230052FD73 /* SwiftAsyncAwait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B5F7182432C7230052FD73 /* SwiftAsyncAwait.framework */; };
 		23B5F7272432C7230052FD73 /* SwiftAsyncAwaitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7262432C7230052FD73 /* SwiftAsyncAwaitTests.swift */; };
 		23B5F7292432C7230052FD73 /* SwiftAsyncAwait.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B5F71B2432C7230052FD73 /* SwiftAsyncAwait.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23B5F7372432C7B40052FD73 /* UrlSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7322432C7B40052FD73 /* UrlSessionTask.swift */; };
+		23B5F7382432C7B40052FD73 /* BlockerTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7332432C7B40052FD73 /* BlockerTask.swift */; };
+		23B5F7392432C7B40052FD73 /* ReturningTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7342432C7B40052FD73 /* ReturningTask.swift */; };
+		23B5F73A2432C7B40052FD73 /* MultipleThrownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7352432C7B40052FD73 /* MultipleThrownError.swift */; };
+		23B5F73B2432C7B40052FD73 /* BasicTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5F7362432C7B40052FD73 /* BasicTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		23B5F7212432C7230052FD73 /* SwiftAsyncAwaitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAsyncAwaitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B5F7262432C7230052FD73 /* SwiftAsyncAwaitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAsyncAwaitTests.swift; sourceTree = "<group>"; };
 		23B5F7282432C7230052FD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B5F7322432C7B40052FD73 /* UrlSessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSessionTask.swift; sourceTree = "<group>"; };
+		23B5F7332432C7B40052FD73 /* BlockerTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockerTask.swift; sourceTree = "<group>"; };
+		23B5F7342432C7B40052FD73 /* ReturningTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturningTask.swift; sourceTree = "<group>"; };
+		23B5F7352432C7B40052FD73 /* MultipleThrownError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleThrownError.swift; sourceTree = "<group>"; };
+		23B5F7362432C7B40052FD73 /* BasicTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 		23B5F71A2432C7230052FD73 /* SwiftAsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
+				23B5F7362432C7B40052FD73 /* BasicTask.swift */,
+				23B5F7332432C7B40052FD73 /* BlockerTask.swift */,
+				23B5F7352432C7B40052FD73 /* MultipleThrownError.swift */,
+				23B5F7342432C7B40052FD73 /* ReturningTask.swift */,
+				23B5F7322432C7B40052FD73 /* UrlSessionTask.swift */,
 				23B5F71B2432C7230052FD73 /* SwiftAsyncAwait.h */,
 				23B5F71C2432C7230052FD73 /* Info.plist */,
 			);
@@ -148,6 +163,7 @@
 				TargetAttributes = {
 					23B5F7172432C7230052FD73 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					23B5F7202432C7230052FD73 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B5F73B2432C7B40052FD73 /* BasicTask.swift in Sources */,
+				23B5F73A2432C7B40052FD73 /* MultipleThrownError.swift in Sources */,
+				23B5F7372432C7B40052FD73 /* UrlSessionTask.swift in Sources */,
+				23B5F7382432C7B40052FD73 /* BlockerTask.swift in Sources */,
+				23B5F7392432C7B40052FD73 /* ReturningTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +361,7 @@
 		23B5F72D2432C7230052FD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U96K894A9R;
@@ -356,6 +378,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Nowaksoft.SwiftAsyncAwait;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +388,7 @@
 		23B5F72E2432C7230052FD73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U96K894A9R;
@@ -380,6 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Nowaksoft.SwiftAsyncAwait;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,6 +414,7 @@
 		23B5F7302432C7230052FD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96K894A9R;
 				INFOPLIST_FILE = SwiftAsyncAwaitTests/Info.plist;
@@ -406,6 +433,7 @@
 		23B5F7312432C7230052FD73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96K894A9R;
 				INFOPLIST_FILE = SwiftAsyncAwaitTests/Info.plist;
